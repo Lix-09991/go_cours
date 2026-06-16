@@ -1,4 +1,4 @@
-package main
+/*package main
 
 import (
 	"fmt"
@@ -21,14 +21,13 @@ func capitalizeWord(word string) string {
 
 	first := string(unicode.ToUpper(r))
 	rest := word[size:]
-	// Привести оставшуюся часть к нижнему регистру
+	// А оставшуюся часть к нижнему регистру
 	rest = strings.Map(func(r rune) rune { return unicode.ToLower(r) }, rest)
 
 	return first + rest
 }
 
-// capitalizeWords преобразует каждое слово: первая буква — заглавная, остальные — строчные.
-// Слова разделяются функцией strings.Fields (все пробельные символы).
+
 func capitalizeWords(s string) string {
 	if s == "" {
 		return s
