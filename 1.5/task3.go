@@ -1,4 +1,4 @@
-/*package main
+package main
 
 import (
 	"fmt"
@@ -26,7 +26,6 @@ func capitalizeWord(word string) string {
 
 	return first + rest
 }
-
 
 func capitalizeWords(s string) string {
 	if s == "" {
