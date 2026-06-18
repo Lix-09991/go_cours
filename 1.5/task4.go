@@ -8,7 +8,7 @@ import (
 
 func checkParentheses(s string) (bool, int, int) {
 	openCount, closeCount := 0, 0
-	balance := 0 // баланс: +1 за '(', -1 за ')'
+	balance := 0 
 
 	for _, ch := range s {
 		switch ch {
@@ -18,14 +18,13 @@ func checkParentheses(s string) (bool, int, int) {
 		case ')':
 			closeCount++
 			balance--
-			// Если баланс стал отрицательным — закрывающая скобка без пары
+			
 			if balance < 0 {
 				return false, openCount, closeCount
 			}
 		}
 	}
 
-	// Скобки верны, только если баланс в конце равен 0
 	return balance == 0, openCount, closeCount
 }
 
